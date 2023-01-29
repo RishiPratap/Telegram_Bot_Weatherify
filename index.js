@@ -48,7 +48,9 @@ if(data.success===false){
         }
     });
 }
-})
+}).catch((err) => {
+    console.log(err);
+});
 bot.action('moreInfo', (ctx) => {
     ctx.answerCbQuery();
     ctx.reply(`${ctx.chat.first_name},You will be notified when the weather changes after every 30 minutes`);
@@ -72,6 +74,8 @@ bot.action('moreInfo', (ctx) => {
             ctx.reply(`${ctx.chat.first_name},You will not be notified when the weather changes`);
             task.stop();
           });
+      }).catch((err) => {
+        console.log(err);
       });
 });
 bot.launch();
