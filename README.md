@@ -12,7 +12,6 @@ npm start
 
 Bot Link: http://t.me/nxc_0258_bot
 
-Commands: /start, /help, /about
+Commands: /start, /help, /about.
 
-```
 ```
